@@ -1,0 +1,862 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="TestCase2" this:TestCase2.in_IncidentNumber="REF1759577" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_IncidentNumber" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>TestCase2_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+      <x:String>UiPath.Testing</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Testing.Activities</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="TestCase2" sap:VirtualizedContainerService.HintSize="831.3333333333333,7132.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="... Given" sap:VirtualizedContainerService.HintSize="636,7110" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Log in | ServiceNow" sap:VirtualizedContainerService.HintSize="602,7027.333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="de257e79-88b1-4c8c-9c8f-2f666238f710" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="568,6745.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="GetObjectText" />
+                <Variable x:TypeArguments="x:String" Name="InitialResponseSLA" />
+                <Variable x:TypeArguments="x:String" Name="InitialResponseCreatedtime" />
+                <Variable x:TypeArguments="x:String" Name="InitialResponseStartTime" />
+                <Variable x:TypeArguments="x:String" Name="InitialResponseBreachTime" />
+                <Variable x:TypeArguments="x:String" Name="CurrentIncidentState" />
+                <Variable x:TypeArguments="x:String" Name="StateUpdated" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'User name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="534,292.6666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="de257e79-88b1-4c8c-9c8f-2f666238f710" Text="balwant.raju" Version="V4">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="https://sbictsntest.service-now.com/" CVScreenId="7b42f6be-2176-422f-b2aa-e76ea8915f3c" CvElementArea="822, 442, 293, 34" CvType="InputBox" DesignTimeRectangle="823, 442, 290, 32" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='form-control' aaname='User name' /&gt;" Guid="a9b55f77-320f-4490-834c-7657c9ff4d68" InformativeScreenshot="7ed5f35407d139eda559244ac3dda613.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Log in | ServiceNow' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CVScreenId="7b42f6be-2176-422f-b2aa-e76ea8915f3c" CvTextArea="822, 425, 58, 11" CvTextArgument="User name" CvType="Text" DesignTimeRectangle="823, 423, 56, 15" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='control-label' aaname='User name' check:innerText='User name' /&gt;" Guid="7feae7ec-e365-42fc-86cc-dd558dc745e7" SearchSteps="FuzzySelector, CV" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+                <uix:NTypeInto.VerifyOptions>
+                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionTypeIntoOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                  </uix:VerifyExecutionTypeIntoOptions>
+                </uix:NTypeInto.VerifyOptions>
+              </uix:NTypeInto>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="534,292.6666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="de257e79-88b1-4c8c-9c8f-2f666238f710" Text="BCCU1Path@*" Version="V4">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="https://sbictsntest.service-now.com/" CVScreenId="7b42f6be-2176-422f-b2aa-e76ea8915f3c" CvElementArea="821, 500, 283, 34" CvType="InputBox" DesignTimeRectangle="823, 501, 259, 32" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' class='form-control' aaname='Password' /&gt;" Guid="5b59b9ef-43c7-4f91-a4bd-6a3756d7cc23" InformativeScreenshot="0faf926db968ee6d1e4c7daf2c058370.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Log in | ServiceNow' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CVScreenId="7b42f6be-2176-422f-b2aa-e76ea8915f3c" CvTextArea="822, 483, 52, 12" CvTextArgument="Password" CvType="Text" DesignTimeRectangle="823, 482, 51, 15" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Password' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Password' tag='LABEL' type='' class='control-label' check:innerText='Password' /&gt;" Guid="7079e2e1-badb-4a6d-98b3-08072ffd38d2" SearchSteps="FuzzySelector, CV" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+                <uix:NTypeInto.VerifyOptions>
+                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionTypeIntoOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                  </uix:VerifyExecutionTypeIntoOptions>
+                </uix:NTypeInto.VerifyOptions>
+              </uix:NTypeInto>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Log in'" sap:VirtualizedContainerService.HintSize="534,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="de257e79-88b1-4c8c-9c8f-2f666238f710" Version="V4">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://sbictsntest.service-now.com/" CVScreenId="7b42f6be-2176-422f-b2aa-e76ea8915f3c" CvElementArea="822, 576, 294, 34" CvTextArea="949, 586, 38, 15" CvTextArgument="Log in" CvType="Button" DesignTimeRectangle="823, 577, 290, 32" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='btn btn-primary' aaname='Log in' check:innerText='Log in' /&gt;" Guid="955b2a75-923c-43a0-b759-d808cb65db09" InformativeScreenshot="68577428c617141e4329005b0d50c4b0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Log in | ServiceNow' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                </uix:NClick.Target>
+                <uix:NClick.VerifyOptions>
+                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionOptions.Retry>
+                    <uix:VerifyExecutionOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionOptions.Timeout>
+                  </uix:VerifyExecutionOptions>
+                </uix:NClick.VerifyOptions>
+              </uix:NClick>
+              <uta:VerifyControlAttribute AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Control Attribute" sap:VirtualizedContainerService.HintSize="534,57.333333333333336" sap2010:WorkflowViewState.IdRef="VerifyControlAttribute_1" Operator="Equality" OutputArgument="Result" OutputMessageFormat="Login to SNOW Verification successful" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="False">
+                <uta:VerifyControlAttribute.ActivityToTest>
+                  <ActivityAction>
+                    <uix:NCheckElement DelayBefore="0" DisplayName="Check Element 'IMG header-logo-image'" sap:VirtualizedContainerService.HintSize="334,159.33333333333334" sap2010:WorkflowViewState.IdRef="NCheckElement_1" ScopeIdentifier="de257e79-88b1-4c8c-9c8f-2f666238f710" Version="V4">
+                      <uix:NCheckElement.OutUiElement>
+                        <OutArgument x:TypeArguments="ui:UiElement">
+                          <VariableReference x:TypeArguments="ui:UiElement">
+                            <VariableReference.Variable>
+                              <Variable x:TypeArguments="ui:UiElement" Name="_autogenerated_OutUiElement" />
+                            </VariableReference.Variable>
+                          </VariableReference>
+                        </OutArgument>
+                      </uix:NCheckElement.OutUiElement>
+                      <uix:NCheckElement.Result>
+                        <OutArgument x:TypeArguments="x:Boolean">
+                          <VariableReference x:TypeArguments="x:Boolean">
+                            <VariableReference.Variable>
+                              <Variable x:TypeArguments="x:Boolean" x:Name="__ReferenceID0" Name="_autogenerated_Result" />
+                            </VariableReference.Variable>
+                          </VariableReference>
+                        </OutArgument>
+                      </uix:NCheckElement.Result>
+                      <uix:NCheckElement.Target>
+                        <uix:TargetAnchorable BrowserURL="https://sbictsntest.service-now.com/now/nav/ui/classic/params/target/%24pa_dashboards_overview.do%3Fsysparm_border%3Dtrue" DesignTimeRectangle="32, 105, 141, 32" DesignTimeScaleFactor="1" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl shadowhostid='' tag='SN-POLARIS-LAYOUT' /&gt;&lt;webctrl shadowhostid='' tag='SN-POLARIS-HEADER' /&gt;&lt;webctrl id='header-logo-image' shadowhostid='' tag='IMG' type='' class='' aaname='Home page' /&gt;" Guid="29f7ed27-ada5-472c-9cf9-ea9be2cdbbed" InformativeScreenshot="53bba9ee75e2c3dca0acecfa81ad7fd2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Dashboards Overview | ServiceNow' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                      </uix:NCheckElement.Target>
+                    </uix:NCheckElement>
+                  </ActivityAction>
+                </uta:VerifyControlAttribute.ActivityToTest>
+                <uta:VerifyControlAttribute.ArgumentsBridgeActivity>
+                  <ActivityFunc x:TypeArguments="x:Object">
+                    <uta:ArgumentsBridge sap2010:WorkflowViewState.IdRef="ArgumentsBridge_1">
+                      <uta:ArgumentsBridge.Input>
+                        <InArgument x:TypeArguments="x:Object">
+                          <VariableValue x:TypeArguments="x:Object" Variable="{x:Reference __ReferenceID0}" />
+                        </InArgument>
+                      </uta:ArgumentsBridge.Input>
+                    </uta:ArgumentsBridge>
+                  </ActivityFunc>
+                </uta:VerifyControlAttribute.ArgumentsBridgeActivity>
+                <uta:VerifyControlAttribute.Expression>
+                  <InArgument x:TypeArguments="x:Boolean">[True]</InArgument>
+                </uta:VerifyControlAttribute.Expression>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uta:VerifyControlAttribute>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'BR'" sap:VirtualizedContainerService.HintSize="534,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="de257e79-88b1-4c8c-9c8f-2f666238f710" Version="V4">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://sbictsntest.service-now.com/now/nav/ui/classic/params/target/%24pa_dashboards_overview.do%3Fsysparm_border%3Dtrue" CVScreenId="ce350d80-bf43-4383-bd74-0810c78472a3" CvElementArea="1879, 105, 31, 31" CvTextArea="1887, 115, 8, 9" CvType="Icon" DesignTimeRectangle="1887, 113, 16, 16" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl shadowhostid='' tag='SN-POLARIS-LAYOUT' /&gt;&lt;webctrl shadowhostid='' tag='SN-POLARIS-HEADER' /&gt;&lt;webctrl shadowhostid='' tag='NOW-AVATAR' /&gt;&lt;webctrl class='now-line-height-crop' shadowhostid='' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl shadowhostid='' tag='SN-POLARIS-LAYOUT' /&gt;&lt;webctrl shadowhostid='' tag='SN-POLARIS-HEADER' /&gt;&lt;webctrl shadowhostid='' tag='NOW-AVATAR' /&gt;&lt;webctrl class='now-line-height-crop' shadowhostid='' tag='SPAN' type='' aaname='BR' check:innerText='BR' /&gt;" Guid="8eb107df-8a88-47e6-91bc-1d14004283bd" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAHhSURBVDhPnZVdS8JQHMZ3G32B+gBFX6QrqYsKLyppFaIMVoQGReSNRIKEJHQTFYgQQRKIFBUFRSG9QRBYqJgXvSEDK0civfi0/1zOqaht8HD4n3Oe356zs50xLS3tII2MjuEmEsfTi4BsNteQaC55yPvHkYETtllcXUfw+papaqwl8pCXGDKQ6NSRET+qGhoReYlBLIYi60lWLmIQi/nPM6snYjGaziMvOnvMMLJcUZalawjyeBI+bgAGkzImtZaFMJJiiV9SJdAVVmsxAg87AOcJ1QS0wxdXxrJpHM6ZMexPqvMl1QY+H8PR70DggepyYA4xvx2d7gt1vqRKYL8d/KQDPM/B0GWH5zKljJcB32NY5sxSelH1S6qdkEw8i6ldMhGQhZF3wMKyMFi9WC/eTFVtoCR5WXJfSUIhDKe0Kc6jtGYuqc6mpBCcZWELUZKyJUcDsPRMwxdVakWVwNLXxjSOKX+k5LXRbopwtopBkxeHgtqnBf5Tn59fyOfzoItaqnUDv3++EYx6wO10oG+zSW5D0UV9nx4l2bpzo3uDqZCuw4GWZ91u14Bcp70FoJ7jiy5joBlDwVYEbudx/hjEXmK5ANRzwBYStsmAg/s17CdWikl1/QLoGfpvZooQVQx+AVIMWJtxHupjAAAAAElFTkSuQmCC" InformativeScreenshot="6e7285f2db89caa50574c0927eb2697b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Dashboards Overview | ServiceNow' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                </uix:NClick.Target>
+                <uix:NClick.VerifyOptions>
+                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionOptions.Retry>
+                    <uix:VerifyExecutionOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionOptions.Timeout>
+                  </uix:VerifyExecutionOptions>
+                </uix:NClick.VerifyOptions>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Impersonate user'" sap:VirtualizedContainerService.HintSize="534,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="de257e79-88b1-4c8c-9c8f-2f666238f710" Version="V4">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://sbictsntest.service-now.com/now/nav/ui/classic/params/target/%24pa_dashboards_overview.do%3Fsysparm_border%3Dtrue" DesignTimeRectangle="1665, 366, 246, 19" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl shadowhostid='' tag='SN-POLARIS-LAYOUT' /&gt;&lt;webctrl shadowhostid='' tag='SN-POLARIS-HEADER' /&gt;&lt;webctrl aaname='Impersonate user' parentid='userMenu' shadowhostid='' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl shadowhostid='' tag='SN-POLARIS-LAYOUT' /&gt;&lt;webctrl shadowhostid='' tag='SN-POLARIS-HEADER' /&gt;&lt;webctrl aaname='Impersonate user' parentid='userMenu' shadowhostid='' tag='DIV' type='' class='user-menu-label polaris-enabled' check:innerText='Impersonate user' /&gt;" Guid="c2852a3b-6b97-44df-8545-7d56319703ad" InformativeScreenshot="9280c34c2e96222b49c78148e6eb64cb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Dashboards Overview | ServiceNow' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                </uix:NClick.Target>
+                <uix:NClick.VerifyOptions>
+                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionOptions.Retry>
+                    <uix:VerifyExecutionOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionOptions.Timeout>
+                  </uix:VerifyExecutionOptions>
+                </uix:NClick.VerifyOptions>
+              </uix:NClick>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT form-field-hvkkdy…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="534,292.6666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="de257e79-88b1-4c8c-9c8f-2f666238f710" Text="Cara Webb" Version="V4">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="https://sbictsntest.service-now.com/now/nav/ui/classic/params/target/%24pa_dashboards_overview.do%3Fsysparm_border%3Dtrue" CVScreenId="61f9a7a8-083f-4ca3-b0f5-877735f41bdc" CvElementArea="696, 441, 543, 34" CvType="InputBox" DesignTimeRectangle="706, 443, 512, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl shadowhostid='' tag='SN-POLARIS-LAYOUT' /&gt;&lt;webctrl shadowhostid='' tag='SN-IMPERSONATION' /&gt;&lt;webctrl shadowhostid='' tag='NOW-TYPEAHEAD' /&gt;&lt;webctrl id='form-field-hvkkdytjzed3-70' shadowhostid='' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl shadowhostid='' tag='SN-POLARIS-LAYOUT' /&gt;&lt;webctrl shadowhostid='' tag='SN-IMPERSONATION' /&gt;&lt;webctrl shadowhostid='' tag='NOW-TYPEAHEAD' /&gt;&lt;webctrl id='form-field-hvkkdytjzed3-70' shadowhostid='' tag='INPUT' type='' class='now-typeahead-native-input' placeholder='Search for a user' aaname='' /&gt;" Guid="e0161bfe-cff6-4927-96f7-ab672221a301" InformativeScreenshot="17666cecc61093ff84846970d7b60122.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Dashboards Overview | ServiceNow' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                </uix:NTypeInto.Target>
+                <uix:NTypeInto.VerifyOptions>
+                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionTypeIntoOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                  </uix:VerifyExecutionTypeIntoOptions>
+                </uix:NTypeInto.VerifyOptions>
+              </uix:NTypeInto>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Cara Webb'" sap:VirtualizedContainerService.HintSize="534,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="de257e79-88b1-4c8c-9c8f-2f666238f710" Version="V4">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://sbictsntest.service-now.com/now/nav/ui/classic/params/target/%24pa_dashboards_overview.do%3Fsysparm_border%3Dtrue" DesignTimeRectangle="738, 484, 78, 17" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl tag='SEISMIC-HOIST' /&gt;&lt;webctrl shadowhostid='' tag='MARK' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SEISMIC-HOIST' /&gt;&lt;webctrl shadowhostid='' tag='MARK' type='' class='has-highlight' aaname='Cara Webb' check:innerText='Cara Webb' /&gt;" Guid="8cba3b9e-5b60-4b37-bd94-775509daf4c3" InformativeScreenshot="ba467be4a2850fe14d1bf44b27ba5140.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Dashboards Overview | ServiceNow' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                </uix:NClick.Target>
+                <uix:NClick.VerifyOptions>
+                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionOptions.Retry>
+                    <uix:VerifyExecutionOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionOptions.Timeout>
+                  </uix:VerifyExecutionOptions>
+                </uix:NClick.VerifyOptions>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Impersonate user'" sap:VirtualizedContainerService.HintSize="534,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="de257e79-88b1-4c8c-9c8f-2f666238f710" Version="V4">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://sbictsntest.service-now.com/now/nav/ui/classic/params/target/%24pa_dashboards_overview.do%3Fsysparm_border%3Dtrue" CVScreenId="9f3c45ff-e003-40ac-a4be-8c28a680cef6" CvElementArea="1086, 734, 159, 35" CvTextArea="1102, 744, 126, 17" CvTextArgument="Impersonate user" CvType="Button" DesignTimeRectangle="1103, 746, 124, 11" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl shadowhostid='' tag='SN-POLARIS-LAYOUT' /&gt;&lt;webctrl shadowhostid='' tag='SN-IMPERSONATION' /&gt;&lt;webctrl shadowhostid='' tag='NOW-MODAL' /&gt;&lt;webctrl idx='2' shadowhostid='' tag='NOW-BUTTON' /&gt;&lt;webctrl shadowhostid='' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl shadowhostid='' tag='SN-POLARIS-LAYOUT' /&gt;&lt;webctrl shadowhostid='' tag='SN-IMPERSONATION' /&gt;&lt;webctrl shadowhostid='' tag='NOW-MODAL' /&gt;&lt;webctrl shadowhostid='' tag='NOW-BUTTON' /&gt;&lt;webctrl shadowhostid='' tag='SPAN' type='' class='now-line-height-crop' aaname='Impersonate user' check:innerText='Impersonate user' /&gt;" Guid="50572025-70bb-4cdd-ace6-32ac45108d69" InformativeScreenshot="a3c3144d3d46a1b8684019b5b2b28cc0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Dashboards Overview | ServiceNow' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                </uix:NClick.Target>
+                <uix:NClick.VerifyOptions>
+                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionOptions.Retry>
+                    <uix:VerifyExecutionOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionOptions.Timeout>
+                  </uix:VerifyExecutionOptions>
+                </uix:NClick.VerifyOptions>
+              </uix:NClick>
+              <uta:VerifyControlAttribute AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Control Attribute" sap:VirtualizedContainerService.HintSize="534,301.3333333333333" sap2010:WorkflowViewState.IdRef="VerifyControlAttribute_2" Operator="Equality" OutputArgument="Result" OutputMessageFormat="Impersonating user verification is successful" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="False">
+                <uta:VerifyControlAttribute.ActivityToTest>
+                  <ActivityAction>
+                    <uix:NCheckElement DelayBefore="0" DisplayName="Check Element 'CW'" sap:VirtualizedContainerService.HintSize="334,159.33333333333334" sap2010:WorkflowViewState.IdRef="NCheckElement_2" ScopeIdentifier="de257e79-88b1-4c8c-9c8f-2f666238f710" Version="V4">
+                      <uix:NCheckElement.OutUiElement>
+                        <OutArgument x:TypeArguments="ui:UiElement">
+                          <VariableReference x:TypeArguments="ui:UiElement">
+                            <VariableReference.Variable>
+                              <Variable x:TypeArguments="ui:UiElement" Name="_autogenerated_OutUiElement" />
+                            </VariableReference.Variable>
+                          </VariableReference>
+                        </OutArgument>
+                      </uix:NCheckElement.OutUiElement>
+                      <uix:NCheckElement.Result>
+                        <OutArgument x:TypeArguments="x:Boolean">
+                          <VariableReference x:TypeArguments="x:Boolean">
+                            <VariableReference.Variable>
+                              <Variable x:TypeArguments="x:Boolean" x:Name="__ReferenceID1" Name="_autogenerated_Result" />
+                            </VariableReference.Variable>
+                          </VariableReference>
+                        </OutArgument>
+                      </uix:NCheckElement.Result>
+                      <uix:NCheckElement.Target>
+                        <uix:TargetAnchorable BrowserURL="https://sbictsntest.service-now.com/now/nav/ui/classic/params/target/%24pa_dashboard.do" DesignTimeRectangle="1885, 113, 20, 16" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl shadowhostid='' tag='SN-POLARIS-LAYOUT' /&gt;&lt;webctrl shadowhostid='' tag='SN-POLARIS-HEADER' /&gt;&lt;webctrl shadowhostid='' tag='NOW-AVATAR' /&gt;&lt;webctrl class='now-line-height-crop' shadowhostid='' tag='SPAN' type='' aaname='CW' check:innerText='CW' /&gt;" Guid="0edfd7fc-67c8-4b84-82d8-169000e2a90b" InformativeScreenshot="d1f8e9bc5c74df5fe942655c93e3d98e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Call Queue Management Dashboard | ServiceNow' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                      </uix:NCheckElement.Target>
+                    </uix:NCheckElement>
+                  </ActivityAction>
+                </uta:VerifyControlAttribute.ActivityToTest>
+                <uta:VerifyControlAttribute.ArgumentsBridgeActivity>
+                  <ActivityFunc x:TypeArguments="x:Object">
+                    <uta:ArgumentsBridge sap2010:WorkflowViewState.IdRef="ArgumentsBridge_2">
+                      <uta:ArgumentsBridge.Input>
+                        <InArgument x:TypeArguments="x:Object">
+                          <VariableValue x:TypeArguments="x:Object" Variable="{x:Reference __ReferenceID1}" />
+                        </InArgument>
+                      </uta:ArgumentsBridge.Input>
+                    </uta:ArgumentsBridge>
+                  </ActivityFunc>
+                </uta:VerifyControlAttribute.ArgumentsBridgeActivity>
+                <uta:VerifyControlAttribute.Expression>
+                  <InArgument x:TypeArguments="x:Boolean">[True]</InArgument>
+                </uta:VerifyControlAttribute.Expression>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uta:VerifyControlAttribute>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Incidents'" sap:VirtualizedContainerService.HintSize="534,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_17" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="de257e79-88b1-4c8c-9c8f-2f666238f710" Version="V4">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://sbictsntest.service-now.com/now/nav/ui/classic/params/target/incident_list.do%3Fsysparm_userpref_module%3D4fed4395c0a8016400fcf06c27b1e6c6%26sysparm_query%3Dactive%253Dtrue%255EEQ%26active%3Dtrue" CVScreenId="a113c32e-4a79-449b-933f-e3fa14d091a4" CvTextArea="47, 565, 65, 14" CvTextArgument="Incidents" CvType="Text" DesignTimeRectangle="48, 563, 63, 20" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl shadowhostid='' tag='SN-POLARIS-LAYOUT' /&gt;&lt;webctrl shadowhostid='' tag='SN-POLARIS-HEADER' /&gt;&lt;webctrl shadowhostid='' tag='SN-POLARIS-MENU' /&gt;&lt;webctrl shadowhostid='' tag='SN-COLLAPSIBLE-LIST' /&gt;&lt;webctrl aaname='Incidents' class='label' shadowhostid='' tag='SPAN' type='' check:innerText='Incidents' /&gt;" Guid="0a3ebf68-c7e1-4965-ab86-8b7e2a36dcf3" InformativeScreenshot="ec2019e06f28189709276d60d036c7fe.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Incidents | ServiceNow' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                </uix:NClick.Target>
+                <uix:NClick.VerifyOptions>
+                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionOptions.Retry>
+                    <uix:VerifyExecutionOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionOptions.Timeout>
+                  </uix:VerifyExecutionOptions>
+                </uix:NClick.VerifyOptions>
+              </uix:NClick>
+              <uix:NSelectItem DisplayName="Select Item 'Incidents'" sap:VirtualizedContainerService.HintSize="534,191.33333333333334" sap2010:WorkflowViewState.IdRef="NSelectItem_3" Item="Number" ScopeIdentifier="de257e79-88b1-4c8c-9c8f-2f666238f710" Version="V4">
+                <uix:NSelectItem.Items>
+                  <scg:List x:TypeArguments="x:String" Capacity="30">
+                    <x:String>for text</x:String>
+                    <x:String>Number</x:String>
+                    <x:String>Incident or Request</x:String>
+                    <x:String>Opened</x:String>
+                    <x:String>Priority</x:String>
+                    <x:String>State</x:String>
+                    <x:String>On hold reason</x:String>
+                    <x:String>Assignment group</x:String>
+                    <x:String>Configuration Item</x:String>
+                    <x:String>Task Category</x:String>
+                    <x:String>Slam Deletion Task</x:String>
+                    <x:String>MIR Required</x:String>
+                    <x:String>MIR Additional Information</x:String>
+                    <x:String>Caused by Change</x:String>
+                    <x:String>Resolved by</x:String>
+                    <x:String>Resolved at</x:String>
+                    <x:String>Owner</x:String>
+                    <x:String>Closed by</x:String>
+                    <x:String>Closed</x:String>
+                    <x:String>Close code</x:String>
+                    <x:String>Close code sub1</x:String>
+                    <x:String>Close code sub2</x:String>
+                    <x:String>Updated</x:String>
+                    <x:String>Updated by</x:String>
+                    <x:String>Summary</x:String>
+                    <x:String>Directorate</x:String>
+                    <x:String>Requester Name</x:String>
+                    <x:String>Channel</x:String>
+                    <x:String>Location</x:String>
+                    <x:String>Username</x:String>
+                  </scg:List>
+                </uix:NSelectItem.Items>
+                <uix:NSelectItem.Target>
+                  <uix:TargetAnchorable BrowserURL="https://sbictsntest.service-now.com/now/nav/ui/classic/params/target/incident_list.do%3Fsysparm_first_row%3D1%26sysparm_query%3Dactive%253dtrue%255eGOTOnumber%253dREF1759446%26sysparm_query_encoded%3Dactive%253dtrue%255eGOTOnumber%253dREF1759446%26sysparm_view%3D" CVScreenId="02d7114b-cd44-4319-84c6-ff5b25c88902" CvElementArea="507, 152, 154, 34" CvType="InputBox" DesignTimeRectangle="508, 153, 150, 32" DesignTimeScaleFactor="1" ElementType="DropDown" FuzzySelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl id='gsft_main' shadowhostid='' tag='IFRAME' /&gt;&lt;webctrl tag='SELECT' type='' class='form-control default-focus-outline' aaname='' /&gt;" Guid="455b4110-283a-4379-8e3f-fadb917c0ba4" InformativeScreenshot="aede7ef8f8b6fa5bb223afa2863ad8dc.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Incidents | ServiceNow' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CVScreenId="02d7114b-cd44-4319-84c6-ff5b25c88902" CvTextArea="445, 162, 59, 13" CvTextArgument="Incidents" CvType="Text" DesignTimeRectangle="446, 160, 58, 18" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl id='gsft_main' shadowhostid='' tag='IFRAME' /&gt;&lt;webctrl aaname='Incidents' tag='SPAN' type='' class='' check:innerText='Incidents' /&gt;" Guid="20e3ace5-2a8f-4ace-b118-bf723a2d48e5" SearchSteps="FuzzySelector, CV" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NSelectItem.Target>
+              </uix:NSelectItem>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="1" DelayBefore="1" DisplayName="Type Into 'INPUT 4c6959771bed96100…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="534,254.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_11" ScopeIdentifier="de257e79-88b1-4c8c-9c8f-2f666238f710" Text="[in_IncidentNumber + &quot;[k(Enter)]&quot;]" Version="V4">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="https://sbictsntest.service-now.com/now/nav/ui/classic/params/target/incident_list.do%3Fsysparm_first_row%3D1%26sysparm_query%3Dactive%253dtrue%255eGOTOnumber%253dREF1759446%26sysparm_query_encoded%3Dactive%253dtrue%255eGOTOnumber%253dREF1759446%26sysparm_view%3D" CVScreenId="1069522e-8a7e-4aea-8d1e-457a97b9b02d" CvElementArea="658, 152, 151, 33" CvType="InputBox" DesignTimeRectangle="658, 153, 150, 32" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl id='gsft_main' shadowhostid='' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' type='search' class='form-control' placeholder='Search' aaname='' /&gt;" Guid="f8bfcdfc-29d6-421c-96ae-48a4eb5bf2a4" InformativeScreenshot="3425a4b62febe391fff7076b1d01738e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Incidents | ServiceNow' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                </uix:NTypeInto.Target>
+              </uix:NTypeInto>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'REF1759446'" sap:VirtualizedContainerService.HintSize="534,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_18" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="de257e79-88b1-4c8c-9c8f-2f666238f710" Version="V4">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://sbictsntest.service-now.com/now/nav/ui/classic/params/target/incident_list.do%3Fsysparm_first_row%3D1%26sysparm_query%3Dactive%253dtrue%255eGOTOnumber%253dREF1759446%26sysparm_query_encoded%3Dactive%253dtrue%255eGOTOnumber%253dREF1759446%26sysparm_view%3D" CVScreenId="100b4ae8-90eb-4118-80e9-d062c6196171" DesignTimeRectangle="410, 318, 82, 17" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tag='MACROPONENT-*' /&gt;&lt;webctrl id='gsft_main' shadowhostid='' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='A' aaname='{0}' /&gt;&quot;, in_IncidentNumber)]" Guid="bc2b2a71-36a2-477a-bcea-d2a0e5502959" InformativeScreenshot="e706cf2b42fec35a4f7a3f87dc88a27b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Incidents | ServiceNow' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                </uix:NClick.Target>
+                <uix:NClick.VerifyOptions>
+                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionOptions.Retry>
+                    <uix:VerifyExecutionOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionOptions.Timeout>
+                  </uix:VerifyExecutionOptions>
+                </uix:NClick.VerifyOptions>
+              </uix:NClick>
+              <uix:NSelectItem DisplayName="Select Item 'State'" sap:VirtualizedContainerService.HintSize="534,191.33333333333334" sap2010:WorkflowViewState.IdRef="NSelectItem_4" Item="In Progress" ScopeIdentifier="de257e79-88b1-4c8c-9c8f-2f666238f710" Version="V4">
+                <uix:NSelectItem.Items>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>New</x:String>
+                    <x:String>In Progress</x:String>
+                  </scg:List>
+                </uix:NSelectItem.Items>
+                <uix:NSelectItem.Target>
+                  <uix:TargetAnchorable BrowserURL="https://sbictsntest.service-now.com/now/nav/ui/classic/params/target/incident.do%3Fsys_id%3D755615731bed961000242178b04bcb54%26sysparm_record_target%3Dincident%26sysparm_record_row%3D9%26sysparm_record_rows%3D5913%26sysparm_record_list%3Dactive%253Dtrue%255EORDERBYDESCopened_at" CVScreenId="0262eda5-82e8-4c12-99fb-664d5c49c479" CvElementArea="1389, 358, 309, 34" CvType="InputBox" DesignTimeRectangle="1390, 358, 306, 32" DesignTimeScaleFactor="1" ElementType="DropDown" FuzzySelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl id='gsft_main' shadowhostid='' tag='IFRAME' /&gt;&lt;webctrl aria-labelledby='label.incident.state' tag='SELECT' type='' class='form-control  ' aaname='State' /&gt;" Guid="84e76c96-41ca-48b9-927e-2c60ebe0054b" InformativeScreenshot="27d162c8b998824df3d5f13973d91dd6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='REF1759443 (Incident) | Incident | ServiceNow' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CVScreenId="0262eda5-82e8-4c12-99fb-664d5c49c479" CvTextArea="1347, 368, 33, 13" CvTextArgument="State" CvType="Text" DesignTimeRectangle="1120, 358, 260, 26" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl id='gsft_main' shadowhostid='' tag='IFRAME' /&gt;&lt;webctrl type='' class=' col-xs-12 col-md-3 col-lg-4 control-label' tag='LABEL' aaname='' check:innerText='State' /&gt;" Guid="520fa1e3-d873-482a-bcb2-f139aa4f468c" SearchSteps="FuzzySelector, CV" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NSelectItem.Target>
+              </uix:NSelectItem>
+              <uix:NGetText DisplayName="Get Text 'State'" sap:VirtualizedContainerService.HintSize="534,191.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_6" ScopeIdentifier="de257e79-88b1-4c8c-9c8f-2f666238f710" TextString="[CurrentIncidentState]" Version="V4">
+                <uix:NGetText.Target>
+                  <uix:TargetAnchorable BrowserURL="https://sbictsntest.service-now.com/now/nav/ui/classic/params/target/incident.do%3Fsys_id%3D755615731bed961000242178b04bcb54%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull%26sysparm_record_row%3D10%26sysparm_record_rows%3D5914%26sysparm_record_list%3Dactive%253dtrue%255eORDERBYDESCopened_at" CVScreenId="e00d8beb-0690-48aa-9923-5e49e9498918" CvElementArea="1389, 358, 309, 33" CvType="InputBox" DesignTimeRectangle="1390, 358, 306, 32" DesignTimeScaleFactor="1" ElementType="DropDown" FuzzySelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl id='gsft_main' shadowhostid='' tag='IFRAME' /&gt;&lt;webctrl aria-labelledby='label.incident.state' tag='SELECT' type='' class='form-control  ' aaname='State' /&gt;" Guid="517da4f0-7b0e-4d6a-942b-731b30d62fe4" InformativeScreenshot="dd374f563cc379970ab85d1d40fcd631.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='REF1759443 (Incident) | Incident | ServiceNow' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CVScreenId="e00d8beb-0690-48aa-9923-5e49e9498918" CvTextArea="1347, 368, 33, 13" CvTextArgument="State" CvType="Text" DesignTimeRectangle="1120, 358, 260, 26" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl id='gsft_main' shadowhostid='' tag='IFRAME' /&gt;&lt;webctrl type='' class=' col-xs-12 col-md-3 col-lg-4 control-label' tag='LABEL' aaname='' check:innerText='State' /&gt;" Guid="847e1e9e-820b-48de-a185-46d3c67d08d7" SearchSteps="FuzzySelector, CV" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NGetText.Target>
+              </uix:NGetText>
+              <uta:VerifyExpressionWithOperator AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="534,232" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_1" Operator="Contains" OutputMessageFormat="Incident verification to In progress is successful" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
+                <uta:VerifyExpressionWithOperator.FirstExpression>
+                  <InArgument x:TypeArguments="x:String">[CurrentIncidentState]</InArgument>
+                </uta:VerifyExpressionWithOperator.FirstExpression>
+                <uta:VerifyExpressionWithOperator.SecondExpression>
+                  <InArgument x:TypeArguments="x:String">["Progress"]</InArgument>
+                </uta:VerifyExpressionWithOperator.SecondExpression>
+              </uta:VerifyExpressionWithOperator>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Close Retroactively'" sap:VirtualizedContainerService.HintSize="534,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_19" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="de257e79-88b1-4c8c-9c8f-2f666238f710" Version="V4">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://sbictsntest.service-now.com/now/nav/ui/classic/params/target/incident.do%3Fsys_id%3D755615731bed961000242178b04bcb54%26sysparm_record_target%3Dincident%26sysparm_record_row%3D9%26sysparm_record_rows%3D5913%26sysparm_record_list%3Dactive%253Dtrue%255EORDERBYDESCopened_at" CVScreenId="2f1d33eb-da20-49a4-af4a-c3bc6de0c57f" CvTextArea="337, 591, 122, 15" CvTextArgument="Close Retroactively" CvType="Text" DesignTimeRectangle="338, 589, 120, 17" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl id='gsft_main' shadowhostid='' tag='IFRAME' /&gt;&lt;webctrl aaname='Close Retroactively' aria-role='button' tag='A' type='' class='navigation_link action_context default-focus-outline' check:innerText='Close Retroactively' /&gt;" Guid="45b9efa4-2037-4608-be6c-db130c0f3a79" InformativeScreenshot="5abdff7e551c873f37b0152e9047646e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='REF1759443 (Incident) | Incident | ServiceNow' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                </uix:NClick.Target>
+                <uix:NClick.VerifyOptions>
+                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionOptions.Retry>
+                    <uix:VerifyExecutionOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionOptions.Timeout>
+                  </uix:VerifyExecutionOptions>
+                </uix:NClick.VerifyOptions>
+              </uix:NClick>
+              <uix:NSelectItem DisplayName="Select Item 'Close code'" sap:VirtualizedContainerService.HintSize="534,191.33333333333334" sap2010:WorkflowViewState.IdRef="NSelectItem_8" Item="Software - Desktop" ScopeIdentifier="de257e79-88b1-4c8c-9c8f-2f666238f710" Version="V4">
+                <uix:NSelectItem.Items>
+                  <scg:List x:TypeArguments="x:String" Capacity="29">
+                    <x:String>-- None --</x:String>
+                    <x:String>Application Support and Governance</x:String>
+                    <x:String>Asset and Config management</x:String>
+                    <x:String>Batch Management</x:String>
+                    <x:String>Configuration - Telephony</x:String>
+                    <x:String>Connectivity Provision</x:String>
+                    <x:String>Directorate Support Team</x:String>
+                    <x:String>Economy</x:String>
+                    <x:String>Hardware - Desktop</x:String>
+                    <x:String>Hardware - Infrastructure</x:String>
+                    <x:String>Hardware - Network</x:String>
+                    <x:String>Hardware - Telephony</x:String>
+                    <x:String>Information Security</x:String>
+                    <x:String>Networks Billing/Reports</x:String>
+                    <x:String>Networks - MDM</x:String>
+                    <x:String>Networks - Mobile</x:String>
+                    <x:String>Networks Services - Data</x:String>
+                    <x:String>Oracle Cloud IRGs</x:String>
+                    <x:String>Print Management</x:String>
+                    <x:String>Power BI</x:String>
+                    <x:String>Property Management</x:String>
+                    <x:String>Purchasing</x:String>
+                    <x:String>SAP</x:String>
+                    <x:String>Service Desk</x:String>
+                    <x:String>Software - Desktop</x:String>
+                    <x:String>Software - Infrastructure</x:String>
+                    <x:String>Software - Sophos</x:String>
+                    <x:String>Web Team - Citizen Service</x:String>
+                    <x:String>Cancelled</x:String>
+                  </scg:List>
+                </uix:NSelectItem.Items>
+                <uix:NSelectItem.Target>
+                  <uix:TargetAnchorable BrowserURL="https://sbictsntest.service-now.com/now/nav/ui/classic/params/target/incident.do%3Fsys_id%3D5274711c1bf99a1000242178b04bcbdd%26sysparm_record_target%3Dincident%26sysparm_record_row%3D1%26sysparm_record_rows%3D1108095%26sysparm_record_list%3DORDERBYDESCopened_at" DesignTimeRectangle="609, 448, 305, 32" DesignTimeScaleFactor="1" ElementType="DropDown" FuzzySelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl id='gsft_main' shadowhostid='' tag='IFRAME' /&gt;&lt;webctrl aria-labelledby='label.incident.close_code' tag='SELECT' type='' class='form-control' aaname='Close code' /&gt;" Guid="1fadaa7d-3de6-4bb6-985e-540b213f7517" InformativeScreenshot="d45da42c2ef19704c0b73f88b686d2b2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='REF1759571 (Incident) | Incident | ServiceNow' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="339, 448, 260, 26" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl id='gsft_main' shadowhostid='' tag='IFRAME' /&gt;&lt;webctrl type='' class=' col-xs-12 col-md-3 col-lg-4 control-label' tag='LABEL' aaname='' check:innerText='Close code' /&gt;" Guid="2065b3e6-667f-47bc-a4e8-f1341e09c4db" SearchSteps="FuzzySelector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NSelectItem.Target>
+              </uix:NSelectItem>
+              <uix:NSelectItem DisplayName="Select Item 'Close code sub1'" sap:VirtualizedContainerService.HintSize="534,191.33333333333334" sap2010:WorkflowViewState.IdRef="NSelectItem_9" Item="HP Quality Center" ScopeIdentifier="de257e79-88b1-4c8c-9c8f-2f666238f710" Version="V4">
+                <uix:NSelectItem.Items>
+                  <scg:List x:TypeArguments="x:String" Capacity="50">
+                    <x:String>Experian Identify</x:String>
+                    <x:String>External Mail</x:String>
+                    <x:String>FAQ</x:String>
+                    <x:String>Fatwire</x:String>
+                    <x:String>Fax Machine</x:String>
+                    <x:String>FDMS Radius</x:String>
+                    <x:String>FileTrail</x:String>
+                    <x:String>FileZilla</x:String>
+                    <x:String>Financial Charges</x:String>
+                    <x:String>Firefox</x:String>
+                    <x:String>Firewall</x:String>
+                    <x:String>Fleet</x:String>
+                    <x:String>FM Facts</x:String>
+                    <x:String>Forecasting &amp; Scheduling</x:String>
+                    <x:String>FTP</x:String>
+                    <x:String>General Enquiry</x:String>
+                    <x:String>GenoPro</x:String>
+                    <x:String>GLAMIS</x:String>
+                    <x:String>Google Chrome</x:String>
+                    <x:String>GuestNET</x:String>
+                    <x:String>Hams Confirm</x:String>
+                    <x:String>Home Connections</x:String>
+                    <x:String>Home Options</x:String>
+                    <x:String>Housing eLearning</x:String>
+                    <x:String>HP Quality Center</x:String>
+                    <x:String>HRIS</x:String>
+                    <x:String>HRIS BO</x:String>
+                    <x:String>HRIS Delphi Millennium</x:String>
+                    <x:String>HRIS DFPROD Database</x:String>
+                    <x:String>IBR Request</x:String>
+                    <x:String>iCare</x:String>
+                    <x:String>IDEA</x:String>
+                    <x:String>IDOX Building Control</x:String>
+                    <x:String>ieSpell</x:String>
+                    <x:String>iFlow</x:String>
+                    <x:String>Iken</x:String>
+                    <x:String>Iken ICMS</x:String>
+                    <x:String>Iken Scanning Module</x:String>
+                    <x:String>Impulse</x:String>
+                    <x:String>In My Shoes</x:String>
+                    <x:String>Inform</x:String>
+                    <x:String>Inline</x:String>
+                    <x:String>Insight</x:String>
+                    <x:String>Insurance</x:String>
+                    <x:String>Internet</x:String>
+                    <x:String>Internet Explorer 6</x:String>
+                    <x:String>Internet Explorer 7</x:String>
+                    <x:String>Internet Explorer 8</x:String>
+                    <x:String>Internet Explorer 10</x:String>
+                    <x:String>Internet Explorer 11</x:String>
+                  </scg:List>
+                </uix:NSelectItem.Items>
+                <uix:NSelectItem.Target>
+                  <uix:TargetAnchorable BrowserURL="https://sbictsntest.service-now.com/now/nav/ui/classic/params/target/incident.do%3Fsys_id%3D5274711c1bf99a1000242178b04bcbdd%26sysparm_record_target%3Dincident%26sysparm_record_row%3D1%26sysparm_record_rows%3D1108095%26sysparm_record_list%3DORDERBYDESCopened_at" DesignTimeRectangle="609, 486, 305, 32" DesignTimeScaleFactor="1" ElementType="DropDown" FuzzySelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl id='gsft_main' shadowhostid='' tag='IFRAME' /&gt;&lt;webctrl aria-labelledby='label.incident.u_close_code_sub1' tag='SELECT' type='' class='form-control' aaname='Close code sub1' /&gt;" Guid="f0e94742-9a42-4b2c-bd7d-9c91cc611f7f" InformativeScreenshot="2d3e883db2fdb0dce5e1da83efdc9fc7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='REF1759571 (Incident) | Incident | ServiceNow' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="339, 486, 260, 26" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl id='gsft_main' shadowhostid='' tag='IFRAME' /&gt;&lt;webctrl type='' class=' col-xs-12 col-md-3 col-lg-4 control-label' tag='LABEL' aaname='' check:innerText='Close code sub1' /&gt;" Guid="9b046eb0-7825-48c9-99e9-a4eaa3764708" SearchSteps="FuzzySelector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NSelectItem.Target>
+              </uix:NSelectItem>
+              <uix:NSelectItem DisplayName="Select Item 'Close code sub2'" sap:VirtualizedContainerService.HintSize="534,191.33333333333334" sap2010:WorkflowViewState.IdRef="NSelectItem_10" Item="configure" ScopeIdentifier="de257e79-88b1-4c8c-9c8f-2f666238f710" Version="V4">
+                <uix:NSelectItem.Items>
+                  <scg:List x:TypeArguments="x:String" Capacity="50">
+                    <x:String>-- None --</x:String>
+                    <x:String>Access database</x:String>
+                    <x:String>Access Problem</x:String>
+                    <x:String>Access Request</x:String>
+                    <x:String>add mailbox</x:String>
+                    <x:String>address book refresh</x:String>
+                    <x:String>ADDUMA Missing</x:String>
+                    <x:String>advice given</x:String>
+                    <x:String>amend group</x:String>
+                    <x:String>amend profile</x:String>
+                    <x:String>Antivirus</x:String>
+                    <x:String>archive post processing</x:String>
+                    <x:String>BIOS Update</x:String>
+                    <x:String>Blue Screen Death</x:String>
+                    <x:String>BCC End of Year</x:String>
+                    <x:String>Business Referral</x:String>
+                    <x:String>calendar</x:String>
+                    <x:String>client reconfigure</x:String>
+                    <x:String>compact</x:String>
+                    <x:String>Compromised ID</x:String>
+                    <x:String>configuration</x:String>
+                    <x:String>configure</x:String>
+                    <x:String>connection update</x:String>
+                    <x:String>contingency approve</x:String>
+                    <x:String>contingency cancel</x:String>
+                    <x:String>Correlation Error</x:String>
+                    <x:String>Corrupt Installation</x:String>
+                    <x:String>Corrupt POA</x:String>
+                    <x:String>create profile</x:String>
+                    <x:String>Credant Still Installed</x:String>
+                    <x:String>Data Migration</x:String>
+                    <x:String>database maintenance</x:String>
+                    <x:String>date format</x:String>
+                    <x:String>Defect</x:String>
+                    <x:String>delegate access</x:String>
+                    <x:String>delete mailbox</x:String>
+                    <x:String>delete profile</x:String>
+                    <x:String>delivery failure</x:String>
+                    <x:String>deployment</x:String>
+                    <x:String>distribution list amend</x:String>
+                    <x:String>distribution list create</x:String>
+                    <x:String>distribution list delete</x:String>
+                    <x:String>distribution list owner</x:String>
+                    <x:String>document preview</x:String>
+                    <x:String>domino error</x:String>
+                    <x:String>Early Life Support</x:String>
+                    <x:String>Emergency Access</x:String>
+                    <x:String>enable ev</x:String>
+                    <x:String>Encryption</x:String>
+                    <x:String>Enhancement</x:String>
+                  </scg:List>
+                </uix:NSelectItem.Items>
+                <uix:NSelectItem.Target>
+                  <uix:TargetAnchorable BrowserURL="https://sbictsntest.service-now.com/now/nav/ui/classic/params/target/incident.do%3Fsys_id%3D5274711c1bf99a1000242178b04bcbdd%26sysparm_record_target%3Dincident%26sysparm_record_row%3D1%26sysparm_record_rows%3D1108095%26sysparm_record_list%3DORDERBYDESCopened_at" DesignTimeRectangle="609, 524, 305, 32" DesignTimeScaleFactor="1" ElementType="DropDown" FuzzySelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl id='gsft_main' shadowhostid='' tag='IFRAME' /&gt;&lt;webctrl aria-labelledby='label.incident.u_close_code_sub2' tag='SELECT' type='' class='form-control' aaname='Close code sub2' /&gt;" Guid="87152a54-0e5c-46ad-ae80-2e5214e0aa77" InformativeScreenshot="0df2742bce2c5810e2ddc806b290a139.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='REF1759571 (Incident) | Incident | ServiceNow' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="339, 524, 260, 26" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl id='gsft_main' shadowhostid='' tag='IFRAME' /&gt;&lt;webctrl type='' class=' col-xs-12 col-md-3 col-lg-4 control-label' tag='LABEL' aaname='' check:innerText='Close code sub2' /&gt;" Guid="59b2d372-2b42-442c-ab72-49ec135d1e9a" SearchSteps="FuzzySelector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NSelectItem.Target>
+              </uix:NSelectItem>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Close notes'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="534,292.6666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_13" ScopeIdentifier="de257e79-88b1-4c8c-9c8f-2f666238f710" Text="ICTDS Automation Closure" Version="V4">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="https://sbictsntest.service-now.com/now/nav/ui/classic/params/target/incident.do%3Fsys_id%3D5274711c1bf99a1000242178b04bcbdd%26sysparm_record_target%3Dincident%26sysparm_record_row%3D1%26sysparm_record_rows%3D1108095%26sysparm_record_list%3DORDERBYDESCopened_at" DesignTimeRectangle="609, 719, 1086, 64" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl id='gsft_main' shadowhostid='' tag='IFRAME' /&gt;&lt;webctrl aria-labelledby='label.incident.close_notes' tag='TEXTAREA' type='' class='form-control' aaname='Close notes' /&gt;" Guid="940fcb0c-f32b-4bb2-8746-192348e6f280" InformativeScreenshot="d5e9a00d557683005f2967d8188a88a9.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='REF1759571 (Incident) | Incident | ServiceNow' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="339, 718, 260, 26" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl id='gsft_main' shadowhostid='' tag='IFRAME' /&gt;&lt;webctrl type='' class=' col-xs-12 col-md-1_5 col-lg-2 control-label' tag='LABEL' aaname='' check:innerText='Close notes' /&gt;" Guid="692c86dc-3f93-46c1-bcc3-827fd46a9b1e" SearchSteps="FuzzySelector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+                <uix:NTypeInto.VerifyOptions>
+                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionTypeIntoOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                  </uix:VerifyExecutionTypeIntoOptions>
+                </uix:NTypeInto.VerifyOptions>
+              </uix:NTypeInto>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Closed'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="534,292.6666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_14" ScopeIdentifier="de257e79-88b1-4c8c-9c8f-2f666238f710" Text="07-11-2024 00:00:00" Version="V4">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="https://sbictsntest.service-now.com/now/nav/ui/classic/params/target/incident.do%3Fsys_id%3D5274711c1bf99a1000242178b04bcbdd%26sysparm_record_target%3Dincident%26sysparm_record_row%3D1%26sysparm_record_rows%3D1108095%26sysparm_record_list%3DORDERBYDESCopened_at" DesignTimeRectangle="1390, 600, 274, 32" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl id='gsft_main' shadowhostid='' tag='IFRAME' /&gt;&lt;webctrl aria-label='Closed' tag='INPUT' type='text' class='form-control text-align-right-ltr element_reference_input  datex' aaname='Closed' /&gt;" Guid="b02a8f39-ce02-49bf-ad8a-6636f5e49f92" InformativeScreenshot="61acc8b77e3018570beda052451e6c77.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='REF1759571 (Incident) | Incident | ServiceNow' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="1120, 600, 260, 26" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl id='gsft_main' shadowhostid='' tag='IFRAME' /&gt;&lt;webctrl type='' class=' col-xs-12 col-md-3 col-lg-4 control-label' tag='LABEL' aaname='' check:innerText='Closed' /&gt;" Guid="fac5261c-d07a-45b1-ae4f-4b74221791b9" SearchSteps="FuzzySelector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+                <uix:NTypeInto.VerifyOptions>
+                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionTypeIntoOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                  </uix:VerifyExecutionTypeIntoOptions>
+                </uix:NTypeInto.VerifyOptions>
+              </uix:NTypeInto>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save'" sap:VirtualizedContainerService.HintSize="534,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_21" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="de257e79-88b1-4c8c-9c8f-2f666238f710" Version="V4">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://sbictsntest.service-now.com/now/nav/ui/classic/params/target/incident.do%3Fsys_id%3D5274711c1bf99a1000242178b04bcbdd%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull%26sysparm_record_row%3D1%26sysparm_record_rows%3D1108095%26sysparm_record_list%3DORDERBYDESCopened_at" DesignTimeRectangle="410, 800, 52, 32" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl id='gsft_main' shadowhostid='' tag='IFRAME' /&gt;&lt;webctrl aaname='Save record and remain here' class='form_action_button  action_context btn btn-default' tag='BUTTON' type='submit' check:innerText='Save' /&gt;" Guid="7cef3667-f22e-4205-90b4-8bbeee555d6e" InformativeScreenshot="cf2f335ddfd4466db53f00548e97e93f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='REF1759571 (Incident) | Incident | ServiceNow' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                </uix:NClick.Target>
+                <uix:NClick.VerifyOptions>
+                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionOptions.Retry>
+                    <uix:VerifyExecutionOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionOptions.Timeout>
+                  </uix:VerifyExecutionOptions>
+                </uix:NClick.VerifyOptions>
+              </uix:NClick>
+              <uix:NGetText DisplayName="Get Text 'State'" sap:VirtualizedContainerService.HintSize="534,191.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_7" ScopeIdentifier="de257e79-88b1-4c8c-9c8f-2f666238f710" TextString="[StateUpdated]" Version="V4">
+                <uix:NGetText.Target>
+                  <uix:TargetAnchorable BrowserURL="https://sbictsntest.service-now.com/now/nav/ui/classic/params/target/incident.do%3Fsys_id%3D5274711c1bf99a1000242178b04bcbdd%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull%26sysparm_record_row%3D1%26sysparm_record_rows%3D1108095%26sysparm_record_list%3DORDERBYDESCopened_at" DesignTimeRectangle="1390, 358, 306, 32" DesignTimeScaleFactor="1" ElementType="DropDown" FuzzySelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl id='gsft_main' shadowhostid='' tag='IFRAME' /&gt;&lt;webctrl aria-label='State' tag='SELECT' type='' class='form-control' aaname='State' /&gt;" Guid="34cdf7cc-12f9-415a-bce9-0115d8efb557" InformativeScreenshot="d7c02c4413b1a39c3f86f5a2b2b3d50b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='REF1759571 (Incident) | Incident | ServiceNow' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="1120, 358, 260, 26" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl id='gsft_main' shadowhostid='' tag='IFRAME' /&gt;&lt;webctrl type='' class=' col-xs-12 col-md-3 col-lg-4 control-label' tag='LABEL' aaname='' check:innerText='State' /&gt;" Guid="72ccef69-77b1-4d89-a9b8-b0a356d11f5f" SearchSteps="FuzzySelector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NGetText.Target>
+              </uix:NGetText>
+              <uta:VerifyExpressionWithOperator AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="534,232" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_2" Operator="Equality" OutputMessageFormat="Incident updated to close verification successful" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
+                <uta:VerifyExpressionWithOperator.FirstExpression>
+                  <InArgument x:TypeArguments="x:String">[StateUpdated]</InArgument>
+                </uta:VerifyExpressionWithOperator.FirstExpression>
+                <uta:VerifyExpressionWithOperator.SecondExpression>
+                  <InArgument x:TypeArguments="x:String">["Closed"]</InArgument>
+                </uta:VerifyExpressionWithOperator.SecondExpression>
+              </uta:VerifyExpressionWithOperator>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'CW'" sap:VirtualizedContainerService.HintSize="534,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="de257e79-88b1-4c8c-9c8f-2f666238f710" Version="V4">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://sbictsntest.service-now.com/now/nav/ui/classic/params/target/incident.do%3Fsys_id%3D0ad7a43f1ba9961000242178b04bcb59%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull" DesignTimeRectangle="1885, 113, 20, 16" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl shadowhostid='' tag='SN-POLARIS-LAYOUT' /&gt;&lt;webctrl shadowhostid='' tag='SN-POLARIS-HEADER' /&gt;&lt;webctrl shadowhostid='' tag='NOW-AVATAR' /&gt;&lt;webctrl class='now-line-height-crop' shadowhostid='' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl shadowhostid='' tag='SN-POLARIS-LAYOUT' /&gt;&lt;webctrl shadowhostid='' tag='SN-POLARIS-HEADER' /&gt;&lt;webctrl shadowhostid='' tag='NOW-AVATAR' /&gt;&lt;webctrl class='now-line-height-crop' shadowhostid='' tag='SPAN' type='' aaname='CW' check:innerText='CW' /&gt;" Guid="1198f942-8d56-4ca3-a2ee-263a63ab011c" InformativeScreenshot="51b0299316d3b06f9a6b47d56afadee7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='REF1759440 (Incident) | Incident | ServiceNow' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                </uix:NClick.Target>
+                <uix:NClick.VerifyOptions>
+                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionOptions.Retry>
+                    <uix:VerifyExecutionOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionOptions.Timeout>
+                  </uix:VerifyExecutionOptions>
+                </uix:NClick.VerifyOptions>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Log out'" sap:VirtualizedContainerService.HintSize="534,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="de257e79-88b1-4c8c-9c8f-2f666238f710" Version="V4">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://sbictsntest.service-now.com/now/nav/ui/classic/params/target/incident.do%3Fsys_id%3D0ad7a43f1ba9961000242178b04bcb59%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull" DesignTimeRectangle="1665, 482, 246, 19" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl shadowhostid='' tag='SN-POLARIS-LAYOUT' /&gt;&lt;webctrl shadowhostid='' tag='SN-POLARIS-HEADER' /&gt;&lt;webctrl aaname='Log out' parentid='userMenu' shadowhostid='' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl shadowhostid='' tag='SN-POLARIS-LAYOUT' /&gt;&lt;webctrl shadowhostid='' tag='SN-POLARIS-HEADER' /&gt;&lt;webctrl aaname='Log out' parentid='userMenu' shadowhostid='' tag='DIV' type='' class='user-menu-label polaris-enabled' check:innerText='Log out' /&gt;" Guid="08cead18-a21a-4fe5-9bbe-1d4058b82580" InformativeScreenshot="5809b182227551c73158a0ebc510664b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='REF1759440 (Incident) | Incident | ServiceNow' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                </uix:NClick.Target>
+                <uix:NClick.VerifyOptions>
+                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionOptions.Retry>
+                    <uix:VerifyExecutionOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionOptions.Timeout>
+                  </uix:VerifyExecutionOptions>
+                </uix:NClick.VerifyOptions>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Log out'" sap:VirtualizedContainerService.HintSize="534,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="de257e79-88b1-4c8c-9c8f-2f666238f710" Version="V4">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://sbictsntest.service-now.com/now/nav/ui/classic/params/target/incident.do%3Fsys_id%3D0ad7a43f1ba9961000242178b04bcb59%26sysparm_view%3D%26sysparm_domain%3Dnull%26sysparm_domain_scope%3Dnull" DesignTimeRectangle="1083, 625, 54, 12" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl shadowhostid='' tag='SN-POLARIS-LAYOUT' /&gt;&lt;webctrl shadowhostid='' tag='NOW-MODAL' /&gt;&lt;webctrl idx='2' shadowhostid='' tag='NOW-BUTTON' /&gt;&lt;webctrl shadowhostid='' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='MACROPONENT-F51912F4C700201072B211D4D8C26010' /&gt;&lt;webctrl shadowhostid='' tag='SN-POLARIS-LAYOUT' /&gt;&lt;webctrl shadowhostid='' tag='NOW-MODAL' /&gt;&lt;webctrl shadowhostid='' tag='NOW-BUTTON' /&gt;&lt;webctrl shadowhostid='' tag='SPAN' type='' class='now-line-height-crop' aaname='Log out' check:innerText='Log out' /&gt;" Guid="efd479b3-fa90-4dff-941a-5cc712be5ea7" InformativeScreenshot="768527778b4b5a358fdc00ca86168e35.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='REF1759440 (Incident) | Incident | ServiceNow' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                </uix:NClick.Target>
+                <uix:NClick.VerifyOptions>
+                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionOptions.Retry>
+                    <uix:VerifyExecutionOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionOptions.Timeout>
+                  </uix:VerifyExecutionOptions>
+                </uix:NClick.VerifyOptions>
+              </uix:NClick>
+              <uta:VerifyControlAttribute AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Control Attribute" sap:VirtualizedContainerService.HintSize="534,50.666666666666664" sap2010:WorkflowViewState.IdRef="VerifyControlAttribute_4" Operator="Equality" OutputArgument="Result" OutputMessageFormat="Logout verification successful" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="False">
+                <uta:VerifyControlAttribute.ActivityToTest>
+                  <ActivityAction>
+                    <uix:NCheckElement DelayBefore="0" DisplayName="Check Element 'Log in'" sap:VirtualizedContainerService.HintSize="334,159.33333333333334" sap2010:WorkflowViewState.IdRef="NCheckElement_4" ScopeIdentifier="de257e79-88b1-4c8c-9c8f-2f666238f710" Version="V4">
+                      <uix:NCheckElement.OutUiElement>
+                        <OutArgument x:TypeArguments="ui:UiElement">
+                          <VariableReference x:TypeArguments="ui:UiElement">
+                            <VariableReference.Variable>
+                              <Variable x:TypeArguments="ui:UiElement" Name="_autogenerated_OutUiElement" />
+                            </VariableReference.Variable>
+                          </VariableReference>
+                        </OutArgument>
+                      </uix:NCheckElement.OutUiElement>
+                      <uix:NCheckElement.Result>
+                        <OutArgument x:TypeArguments="x:Boolean">
+                          <VariableReference x:TypeArguments="x:Boolean">
+                            <VariableReference.Variable>
+                              <Variable x:TypeArguments="x:Boolean" x:Name="__ReferenceID2" Name="_autogenerated_Result" />
+                            </VariableReference.Variable>
+                          </VariableReference>
+                        </OutArgument>
+                      </uix:NCheckElement.Result>
+                      <uix:NCheckElement.Target>
+                        <uix:TargetAnchorable BrowserURL="https://sbictsntest.service-now.com/navpage.do" CVScreenId="0e85c3ea-0cdc-44d0-b5c8-7295731dd365" CvElementArea="822, 576, 293, 34" CvTextArea="949, 586, 38, 15" CvTextArgument="Log in" CvType="Button" DesignTimeRectangle="823, 577, 290, 32" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='btn btn-primary' aaname='Log in' check:innerText='Log in' /&gt;" Guid="2e20d7f7-6208-4e7d-95ef-6a0d6ea79c3b" InformativeScreenshot="db7cc6a093c2f6127d39db71f0ffb120.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Log in | ServiceNow' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                      </uix:NCheckElement.Target>
+                    </uix:NCheckElement>
+                  </ActivityAction>
+                </uta:VerifyControlAttribute.ActivityToTest>
+                <uta:VerifyControlAttribute.ArgumentsBridgeActivity>
+                  <ActivityFunc x:TypeArguments="x:Object">
+                    <uta:ArgumentsBridge sap2010:WorkflowViewState.IdRef="ArgumentsBridge_4">
+                      <uta:ArgumentsBridge.Input>
+                        <InArgument x:TypeArguments="x:Object">
+                          <VariableValue x:TypeArguments="x:Object" Variable="{x:Reference __ReferenceID2}" />
+                        </InArgument>
+                      </uta:ArgumentsBridge.Input>
+                    </uta:ArgumentsBridge>
+                  </ActivityFunc>
+                </uta:VerifyControlAttribute.ArgumentsBridgeActivity>
+                <uta:VerifyControlAttribute.Expression>
+                  <InArgument x:TypeArguments="x:Boolean">[True]</InArgument>
+                </uta:VerifyControlAttribute.Expression>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uta:VerifyControlAttribute>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="e99c1071ef1c48204d87e09eb729f5ab.jpg" Selector="&lt;html app='chrome.exe' title='Log in | ServiceNow' /&gt;" Title="Log in | ServiceNow" Url="https://sbictsntest.service-now.com/" />
+        </uix:NApplicationCard.TargetApp>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uix:NApplicationCard>
+    </Sequence>
+  </Sequence>
+</Activity>
